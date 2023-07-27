@@ -27,5 +27,7 @@ Fresh computer
 ```bash
   ./ansible-run
 ```
-    
-    
+
+## TODO
+
+nvim script is not working - it need to be fixed
