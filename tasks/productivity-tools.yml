@@ -1,8 +1,22 @@
+- name: shutter ppa (ppa:linuxuprising/shutter)
+  become: true
+  apt_repository:
+    repo: ppa:linuxuprising/shutter
+    state: present
+    update_cache: True
+  tags:
+    - install
+    - productivity
+
 - name: Install packages
   apt: name={{item}}
   with_items:
     - tmux
     - fzf
+    - ripgrep
+    - screenkey
+    - tldr
+    - shutter
   tags:
     - install
     - productivity

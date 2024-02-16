@@ -3,16 +3,14 @@
     name: ["nodejs", "npm"]
   tags:
     - install
-    - node
-- name: Install N
-  npm:
-    name: n
-    global: yes
+    - nodejs
+- name: Install Volta
+  ansible.builtin.shell: curl https://get.volta.sh | bash
   tags:
     - install
     - node
-- name: Install correct version of Node
-  shell: n 18
+- name: Install the latest LTS version
+  ansible.builtin.shell: volta install node
   tags:
     - install
     - node

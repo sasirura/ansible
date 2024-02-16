@@ -19,6 +19,7 @@
     - htop
     - golang
     - python3-pip
+    - i3
   tags:
     - install
     - core
