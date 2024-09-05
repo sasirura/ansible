@@ -8,13 +8,12 @@
       apt: update_cache=true
       changed_when: False
   tasks:
-    - include: tasks/ssh.yml
     - include: tasks/core-setup.yml
-    - include: tasks/node-setup.yml
-    - include: tasks/brave.yml
-    - include: tasks/npm-packages.yml
-    - include: tasks/productivity-tools.yml
     - include: tasks/zsh-setup.yml
+    - include: tasks/node-setup.yml
+    - include: tasks/npm-packages.yml
+    - include: tasks/brave.yml
+    - include: tasks/productivity-tools.yml
     - include: tasks/nvim-setup.yml
     - include: tasks/dotfiles.yml
 

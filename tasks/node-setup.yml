@@ -4,13 +4,18 @@
   tags:
     - install
     - nodejs
-- name: Install Volta
-  ansible.builtin.shell: curl https://get.volta.sh | bash
+- name: Install fnm
+  shell: curl -fsSL https://fnm.vercel.app/install | bash
   tags:
     - install
     - node
-- name: Install the latest LTS version
-  ansible.builtin.shell: volta install node
+- name: Add fnm to PATH
+  shell: source ~/.zshrc
+  tags:
+    - install
+    - node
+- name: Download and install node.js
+  shell: fnm use --install-if-missing 20
   tags:
     - install
     - node
